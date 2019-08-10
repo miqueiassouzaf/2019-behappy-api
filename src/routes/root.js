@@ -1,4 +1,4 @@
-const root = {
+export default {
   method: "GET",
   path: "/",
   handler: (request, reply) => ({
@@ -6,5 +6,3 @@ const root = {
     title: "API do App Lista de tarefas"
   })
 };
-
-export default root;

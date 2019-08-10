@@ -9,7 +9,10 @@
   "scripts": {
     "dev-start": "nodemon bootstrap",
     "start": "node bootstrap",
-    "postinstall": "knex migrate:latest && knex seed:run"
+    "postinstall": "knex migrate:latest && knex seed:run",
+    "db-migrate": "knex migrate:up",
+    "db-populate": "knex seed:run",
+    "db-create": "knex migrate:latest && knex seed:run"
   },
   "keywords": [
     "api",
@@ -21,10 +24,12 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^18.3.1",
+    "@hapi/joi": "^15.1.0",
     "babel-core": "^6.26.3",
     "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "hapi-router": "^5.0.0",
     "knex": "^0.15.2",
     "sqlite3": "^4.0.2"
   },
