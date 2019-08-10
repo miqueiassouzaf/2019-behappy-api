@@ -9,13 +9,22 @@ exports.seed = function(knex, Promise) {
       return knex(table_name).insert([
         {
           title: "Bom dia",
-          description: "Você deu bom dia para alguém há 44 dias"
+          description: "Você deu bom dia para alguém há 44 dias",
+          what: 2,
+          who: 6
         },
         {
           title: "Ligação",
-          description: "Você ligou para seus amigos há 44 dias"
+          description: "Você ligou para seus amigos há 44 dias",
+          what: 3,
+          who: 4
         },
-        { title: "Zap", description: "Envie um zap aos seus amigos em 6 horas" }
+        {
+          title: "Zap",
+          description: "Envie um zap aos seus pais em 6 horas",
+          what: 1,
+          who: 1
+        }
       ]);
     });
 };
