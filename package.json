@@ -4,12 +4,12 @@
   "description": "API do App Lista de tarefas",
   "main": "bootstrap.js",
   "engines": {
-    "node": "10.11.0"
+    "node": "12"
   },
   "scripts": {
     "dev-start": "nodemon bootstrap",
     "start": "node bootstrap",
-    "postinstall": ""
+    "postinstall": "knex migrate:latest && knex seed:run"
   },
   "keywords": [
     "api",
@@ -26,7 +26,9 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "knex": "^0.15.2",
-    "nodemon": "^1.18.4",
     "sqlite3": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
