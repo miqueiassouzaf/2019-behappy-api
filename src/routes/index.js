@@ -1,3 +1,4 @@
 import root from "./root";
+import tasks_route from "./tasks";
 
-export { root };
+export { root, tasks_route };
