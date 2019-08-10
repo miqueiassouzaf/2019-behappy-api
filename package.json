@@ -11,6 +11,9 @@
     "start": "node bootstrap",
     "postinstall": "knex migrate:latest && knex seed:run",
     "db-migrate": "knex migrate:up",
+    "db-migrate-make": "knex migrate:make",
+    "db-migrate-down": "knex migrate:down",
+    "db-seed-make": "knex seed:make",
     "db-populate": "knex seed:run",
     "db-create": "knex migrate:latest && knex seed:run"
   },
@@ -30,7 +33,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "hapi-router": "^5.0.0",
-    "knex": "^0.15.2",
+    "knex": "^0.19.1",
     "sqlite3": "^4.0.2"
   },
   "devDependencies": {
