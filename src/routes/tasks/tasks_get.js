@@ -1,14 +1,7 @@
-import knex from "../../config/knex";
-
-const table_name = "tasks";
+import { Task } from "../../models";
 
 export default {
   method: "GET",
   path: "/tasks",
-  handler: (request, reply) =>
-    knex
-      .from(table_name)
-      .select("oid", "title", "description")
-      .then(results => reply.response(results))
-      .catch(err => reply.response(err))
+  handler: (request, reply) => Task.getAll()
 };
